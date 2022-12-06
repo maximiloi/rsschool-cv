@@ -1,5 +1,7 @@
 # Maxim Toroshscin
 
+![Maxim Toroshscin](https://avatars.githubusercontent.com/u/29151316?v=2 'Avatar - Maxim Toroshscin')
+
 #### Junior Frontend Developer
 
 ---
@@ -75,7 +77,8 @@ Petersburg.
 
 ## Sample code
 
-```document.addEventListener('click', function (e) {
+```
+  document.addEventListener('click', function (e) {
   const targetItem = e.target;
 
   if (targetItem.closest('[data-ripple]')) {
