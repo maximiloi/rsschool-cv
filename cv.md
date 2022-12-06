@@ -34,10 +34,8 @@ Petersburg.
 - Gulp
 - Figma, Photoshop
 - Git
-- JavaScript (base)
-- React (base)
-- Php (base)
-- PHPMailer
+- JavaScript (base), React (base)
+- Php (base), PHPMailer (plugin setup)
 - Gulp
 - Figma, Photoshop
 
