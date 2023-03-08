@@ -20,9 +20,10 @@
             <h1 class="header__name">Maxim Iloi</h1>
             <h2 class="header__role">Junior Frontend Developer</h2>
             <ul class="header__contact contact">
-                <li class="contact__item"><i class="fa-solid fa-phone"></i> <a href="#" class="contact__link">+7 981 719
+                <li class="contact__item"><i class="fa-solid fa-phone"></i> <a href="tel:+79817197800"
+                        class="contact__link">+7 981 719
                         78 00</a></li>
-                <li class="contact__item"><i class="fa-solid fa-envelope"></i> <a href=""
+                <li class="contact__item"><i class="fa-solid fa-envelope"></i> <a href="mailto:maximiloi@gmail.com"
                         class="contact__link">maximiloi@gmail.com</a></li>
                 <li class="contact__item"><i class="fa-brands fa-telegram"></i> <a href="https://t.me/maximiloi"
                         class="contact__link">@maximiloi</a></li>
@@ -42,13 +43,11 @@
             <section>
                 <h3>about me</h3>
                 <p>I develop responsive mobile-first websites (also with attention to semantic layout) for more than 3
-                    years. I have
-                    experience of commercial development as a team member. I have excellent experience in HTML and CSS.
-                    I’m profound in
-                    reading and fixing peers code. My current work includes integrating JQuery plugins and also adapting
-                    vanilla JavaScript
-                    code on different projects. My hobbies are collecting vinyl, playing and popularising flag-football
-                    in Saint Petersburg.
+                    years. I have experience of commercial development as a team member. I have excellent experience in
+                    HTML and CSS.
+                    I’m profound in reading and fixing peers code. My current work includes integrating JQuery plugins
+                    and also adapting vanilla JavaScript code on different projects. My hobbies are collecting vinyl,
+                    playing and popularising flag-football in Saint Petersburg.
                 </p>
             </section>
             <section>
@@ -56,7 +55,8 @@
                 <article>
                     <h4>Online store 'arteviva.ru'</h4>
                     <h5>Saint-Petersburg (2022 - Present)</h5>
-                    <p></p>
+                    <p>Customizing the WooComerce theme, adding WP plugins, adding product, making photos.
+                        Work with social networks. Work in Canva</p>
                 </article>
                 <article>
                     <h4>Freelancer</h4>
@@ -116,17 +116,23 @@
                 <h3>sample Code</h3>
                 <pre>
                     <code class="lang-js">
-const reverseString = (str) => {
-    let i = str.length - 1;
-    let result = ' ';
-
-    while (i >= 0) {
-        result += str[i];
-        i--;
-    }
-
-    return result;
-};
+decode = (string) =&gt; {
+    return (
+        string
+            .split(/(.{10})/)
+            .map((elem) =&gt; {
+                return elem.replace(/00/g, '').replace(/10/g, '.').replace(/11/g, '-');
+            })
+            .map((elem) =&gt; {
+                for (const key in MORSE_TABLE) {
+                    if (elem === key) {
+                        return MORSE_TABLE[key];
+                    }
+                }
+            })
+            .join('')
+    );
+}
                     </code>
                 </pre>
             </section>
@@ -142,7 +148,7 @@ const reverseString = (str) => {
                     <li>PHP (base)</li>
                     <li>PHPMailer (plugin setup)</li>
                 </ul>
-                <h5>Tools & Technologies</h5>
+                <h5>Tools &amp; Technologies</h5>
                 <ul class="skills">
                     <li>Visual Studio Code</li>
                     <li>npm</li>
