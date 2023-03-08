@@ -43,13 +43,11 @@
             <section>
                 <h3>about me</h3>
                 <p>I develop responsive mobile-first websites (also with attention to semantic layout) for more than 3
-                    years. I have
-                    experience of commercial development as a team member. I have excellent experience in HTML and CSS.
-                    I’m profound in
-                    reading and fixing peers code. My current work includes integrating JQuery plugins and also adapting
-                    vanilla JavaScript
-                    code on different projects. My hobbies are collecting vinyl, playing and popularising flag-football
-                    in Saint Petersburg.
+                    years. I have experience of commercial development as a team member. I have excellent experience in
+                    HTML and CSS.
+                    I’m profound in reading and fixing peers code. My current work includes integrating JQuery plugins
+                    and also adapting vanilla JavaScript code on different projects. My hobbies are collecting vinyl,
+                    playing and popularising flag-football in Saint Petersburg.
                 </p>
             </section>
             <section>
@@ -118,17 +116,23 @@
                 <h3>sample Code</h3>
                 <pre>
                     <code class="lang-js">
-const reverseString = (str) => {
-    let i = str.length - 1;
-    let result = ' ';
-
-    while (i >= 0) {
-        result += str[i];
-        i--;
-    }
-
-    return result;
-};
+decode = (string) =&gt; {
+    return (
+        string
+            .split(/(.{10})/)
+            .map((elem) =&gt; {
+                return elem.replace(/00/g, '').replace(/10/g, '.').replace(/11/g, '-');
+            })
+            .map((elem) =&gt; {
+                for (const key in MORSE_TABLE) {
+                    if (elem === key) {
+                        return MORSE_TABLE[key];
+                    }
+                }
+            })
+            .join('')
+    );
+}
                     </code>
                 </pre>
             </section>
@@ -144,7 +148,7 @@ const reverseString = (str) => {
                     <li>PHP (base)</li>
                     <li>PHPMailer (plugin setup)</li>
                 </ul>
-                <h5>Tools & Technologies</h5>
+                <h5>Tools &amp; Technologies</h5>
                 <ul class="skills">
                     <li>Visual Studio Code</li>
                     <li>npm</li>
